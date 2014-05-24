@@ -71,73 +71,73 @@ final_tidy<-ddply(final_data,.(subject,activity),function(x){
 # Variables in the Data Set
 The following variables are present in the codebook
 
-Variable Name|Desciption|
-|-------------|-----------|
-subject|
-activity|
-tbodyaccmeanx|
-tbodyaccmeany|
-tbodyaccmeanz|
-tbodyaccstdx|
-tbodyaccstdy|
-tbodyaccstdz|
-tgravityaccmeanx|
-tgravityaccmeany|
-tgravityaccmeanz|
-tgravityaccstdx|
-tgravityaccstdy|
-tgravityaccstdz|
-tbodyaccjerkmeanx|
-tbodyaccjerkmeany|
-tbodyaccjerkmeanz|
-tbodyaccjerkstdx|
-tbodyaccjerkstdy|
-tbodyaccjerkstdz|
-tbodygyromeanx|
-tbodygyromeany|
-tbodygyromeanz|
-tbodygyrostdx|
-tbodygyrostdy|
-tbodygyrostdz|
-tbodygyrojerkmeanx|
-tbodygyrojerkmeany|
-tbodygyrojerkmeanz|
-tbodygyrojerkstdx|
-tbodygyrojerkstdy|
-tbodygyrojerkstdz|
-tbodyaccmagmean|
-tbodyaccmagstd|
-tgravityaccmagmean|
-tgravityaccmagstd|
-tbodyaccjerkmagmean|
-tbodyaccjerkmagstd|
-tbodygyromagmean|
-tbodygyromagstd|
-tbodygyrojerkmagmean|
-tbodygyrojerkmagstd|
-fbodyaccmeanx|
-fbodyaccmeany|
-fbodyaccmeanz|
-fbodyaccstdx|
-fbodyaccstdy|
-fbodyaccstdz|
-fbodyaccjerkmeanx|
-fbodyaccjerkmeany|
-fbodyaccjerkmeanz|
-fbodyaccjerkstdx|
-fbodyaccjerkstdy|
-fbodyaccjerkstdz|
-fbodygyromeanx|
-fbodygyromeany|
-fbodygyromeanz|
-fbodygyrostdx|
-fbodygyrostdy|
-fbodygyrostdz|
-fbodyaccmagmean|
-fbodyaccmagstd|
-fbodybodyaccjerkmagmean|
-fbodybodyaccjerkmagstd|
-fbodybodygyromagmean|
-fbodybodygyromagstd|
-fbodybodygyrojerkmagmean|
-fbodybodygyrojerkmagstd|
+Variable Name|Desciption| The mean value of subject/activty combination for 
+|-------------|-----------| The mean value of subject/activty combination for 
+subject| The ID of the subject from 1 to 30
+activity| The Descriptive activity, such as walking etc
+tbodyaccmeanx| The mean value of subject/activty combination for 
+tbodyaccmeany| The mean value of subject/activty combination for 
+tbodyaccmeanz| The mean value of subject/activty combination for 
+tbodyaccstdx| The mean value of subject/activty combination for 
+tbodyaccstdy| The mean value of subject/activty combination for 
+tbodyaccstdz| The mean value of subject/activty combination for 
+tgravityaccmeanx| The mean value of subject/activty combination for 
+tgravityaccmeany| The mean value of subject/activty combination for 
+tgravityaccmeanz| The mean value of subject/activty combination for 
+tgravityaccstdx| The mean value of subject/activty combination for 
+tgravityaccstdy| The mean value of subject/activty combination for 
+tgravityaccstdz| The mean value of subject/activty combination for 
+tbodyaccjerkmeanx| The mean value of subject/activty combination for 
+tbodyaccjerkmeany| The mean value of subject/activty combination for 
+tbodyaccjerkmeanz| The mean value of subject/activty combination for 
+tbodyaccjerkstdx| The mean value of subject/activty combination for 
+tbodyaccjerkstdy| The mean value of subject/activty combination for 
+tbodyaccjerkstdz| The mean value of subject/activty combination for 
+tbodygyromeanx| The mean value of subject/activty combination for 
+tbodygyromeany| The mean value of subject/activty combination for 
+tbodygyromeanz| The mean value of subject/activty combination for 
+tbodygyrostdx| The mean value of subject/activty combination for 
+tbodygyrostdy| The mean value of subject/activty combination for 
+tbodygyrostdz| The mean value of subject/activty combination for 
+tbodygyrojerkmeanx| The mean value of subject/activty combination for 
+tbodygyrojerkmeany| The mean value of subject/activty combination for 
+tbodygyrojerkmeanz| The mean value of subject/activty combination for 
+tbodygyrojerkstdx| The mean value of subject/activty combination for 
+tbodygyrojerkstdy| The mean value of subject/activty combination for 
+tbodygyrojerkstdz| The mean value of subject/activty combination for 
+tbodyaccmagmean| The mean value of subject/activty combination for 
+tbodyaccmagstd| The mean value of subject/activty combination for 
+tgravityaccmagmean| The mean value of subject/activty combination for 
+tgravityaccmagstd| The mean value of subject/activty combination for 
+tbodyaccjerkmagmean| The mean value of subject/activty combination for 
+tbodyaccjerkmagstd| The mean value of subject/activty combination for 
+tbodygyromagmean| The mean value of subject/activty combination for 
+tbodygyromagstd| The mean value of subject/activty combination for 
+tbodygyrojerkmagmean| The mean value of subject/activty combination for 
+tbodygyrojerkmagstd| The mean value of subject/activty combination for 
+fbodyaccmeanx| The mean value of subject/activty combination for 
+fbodyaccmeany| The mean value of subject/activty combination for 
+fbodyaccmeanz| The mean value of subject/activty combination for 
+fbodyaccstdx| The mean value of subject/activty combination for 
+fbodyaccstdy| The mean value of subject/activty combination for 
+fbodyaccstdz| The mean value of subject/activty combination for 
+fbodyaccjerkmeanx| The mean value of subject/activty combination for 
+fbodyaccjerkmeany| The mean value of subject/activty combination for 
+fbodyaccjerkmeanz| The mean value of subject/activty combination for 
+fbodyaccjerkstdx| The mean value of subject/activty combination for 
+fbodyaccjerkstdy| The mean value of subject/activty combination for 
+fbodyaccjerkstdz| The mean value of subject/activty combination for 
+fbodygyromeanx| The mean value of subject/activty combination for 
+fbodygyromeany| The mean value of subject/activty combination for 
+fbodygyromeanz| The mean value of subject/activty combination for 
+fbodygyrostdx| The mean value of subject/activty combination for 
+fbodygyrostdy| The mean value of subject/activty combination for 
+fbodygyrostdz| The mean value of subject/activty combination for 
+fbodyaccmagmean| The mean value of subject/activty combination for 
+fbodyaccmagstd| The mean value of subject/activty combination for 
+fbodybodyaccjerkmagmean| The mean value of subject/activty combination for 
+fbodybodyaccjerkmagstd| The mean value of subject/activty combination for 
+fbodybodygyromagmean| The mean value of subject/activty combination for 
+fbodybodygyromagstd| The mean value of subject/activty combination for 
+fbodybodygyrojerkmagmean| The mean value of subject/activty combination for 
+fbodybodygyrojerkmagstd| The mean value of subject/activty combination for 
