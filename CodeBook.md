@@ -12,7 +12,7 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 The program starts by reading all the relevant data files.
 
-```r
+```{r }
 features<-read.table("UCI HAR Dataset/features.txt")
 activity_labels<-read.table("UCI HAR Dataset/activity_labels.txt")
 names(activity_labels)<-c("activity","description")
