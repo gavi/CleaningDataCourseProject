@@ -2,10 +2,11 @@
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip and put in the same folder
 
 # Read all the necessary files
-library(data.table)
-
+require(data.table)
+require(plyr)
 features<-read.table("UCI HAR Dataset/features.txt")
 activity_labels<-read.table("UCI HAR Dataset/activity_labels.txt")
+names(activity_labels)<-c("activity","description")
 test_data<-read.table("UCI HAR Dataset/test/X_test.txt",header=F)
 train_data<-read.table("UCI HAR Dataset/train/X_train.txt",header=F)
 subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")
@@ -13,9 +14,12 @@ names(subject_test)<-c("subject")
 subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")
 names(subject_train)<-c("subject")
 test_labels<-read.table("UCI HAR Dataset/test/y_test.txt")
-test_labels<-data.frame(activity=merge(test_labels,activity_labels)[,"V2"])
+names(test_labels)<-c("activity")
+test_labels<-data.frame(activity=join(test_labels,activity_labels)[["description"]])
+
 train_labels<-read.table("UCI HAR Dataset/train/y_train.txt")
-train_labels<-data.frame(activity=merge(train_labels,activity_labels)[,"V2"])
+names(train_labels)<-c("activity")
+train_labels<-data.frame(activity=join(train_labels,activity_labels)[,"description"])
 
 #Extract only the relevant Features we need - means and standard deviations
 
@@ -29,10 +33,8 @@ names(test_data)<-gsub("\\)","",gsub("\\(","",tolower(gsub("-","",relevant_featu
 names(train_data)<-gsub("\\)","",gsub("\\(","",tolower(gsub("-","",relevant_features[["V2"]]))))
 
 #Create test and training datasets with descriptive activities and subjects
-test_data<-cbind(test_labels,test_data)
-test_data<-cbind(subject_test,test_data)
-train_data<-cbind(train_labels,train_data)
-train_data<-cbind(subject_train,train_data)
+test_data<-cbind(subject_test,test_labels,test_data)
+train_data<-cbind(subject_train,train_labels,train_data)
 
 #Finally Merge both datasets
 final_data<-rbind(test_data,train_data)
@@ -46,5 +48,5 @@ final_tidy<-ddply(final_data,.(subject,activity),function(x){
 })
 
 #Write second tidy data set as CSV
-write.table(final_tidy,file="output_avg_activity_subject.txt",row.names=FALSE)
+write.csv(final_tidy,file="output_avg_activity_subject.txt",row.names=FALSE)
 
